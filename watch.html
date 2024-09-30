@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+
+</head>
+<body>
+    <div id="hour">00</div>
+    <div id="minitus">00</div>
+    <div id="second">00</div>
+    
+</body>
+
+<script>
+
+let sec=0
+let min=1
+let hou=1
+
+function seconds(){
+    if(sec==60){
+        sec=0;
+        document.getElementById("minitus").innerHTML=min;
+        if(min==60){
+        min=0;
+         document.getElementById("hours").innerHTML=hou;
+         hou++;
+        if(hou==24){
+            hou=0;
+        }
+
+
+        }
+        min++;
+    }
+        document.getElementById("second").innerHTML=sec++;
+    
+    }
+
+    setInterval(()=>{
+        seconds();
+
+    },1000);
+
+
+
+</script>
+</html>
